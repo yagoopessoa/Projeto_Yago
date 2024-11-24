@@ -1,0 +1,180 @@
+:root {
+    --main-padding: 10px;
+    --main-margin: 20px;
+    --main-width: 1200px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    text-align: center;
+    font-family: helvetica;
+    position: relative;
+    box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+header {
+    height: 400px;
+    color: white;
+    text-align: center;
+    background: url(/assets/img/cr7-bg-header.png), #000;
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    background-size: contain;
+    position: relative;
+}
+
+header div.container {
+    position: relative;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.nav-bar {
+    max-width: var(--main-width);
+    position: relative;
+    bottom: 0;
+}
+
+.nav-bar > ul {
+    max-width: var(--main-width);
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000000e7;
+}
+
+.nav-bar ul li {
+    list-style: none;
+    text-transform: capitalize;
+}
+
+.nav-bar ul li a {
+    color: #fff;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.nav-bar ul li a:hover {
+    color: #000;
+    background-color: #fff;
+    border-top: 1px solid #000;
+    border-right: 1px solid #000;
+    border-left: 1px solid #000;
+    border-radius: 10px 10px 0px 0px;
+}
+
+ul li a.active {
+    background-color: #fff;
+    color: #000;
+    border-radius: 10px 10px 0px 0px;
+}
+
+main {
+    background-color: #fff;
+    display: flex;
+    padding: 4vw;
+}
+
+h2,
+h3 {
+    margin: 40px;
+}
+
+main p {
+    text-indent: 40px;
+    text-align: justify;
+    margin-bottom: 50px;
+}
+
+.container {
+    max-width: var(--main-width);
+    margin: 0 auto;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.responsive {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+section img {
+    border-radius: 10px;
+}
+
+.club {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.club img {
+    width: 200px;
+}
+
+.club p {
+    flex: 3;
+}
+
+#vida-pessoal img{
+    max-width: 600px;
+}
+
+#vida-pessoal p {
+    margin-top: 50px;
+}
+
+footer {
+    text-align: center;
+    padding: var(--main-padding) 0;
+    background: #000000d8;
+    color: white;
+    bottom: 0;
+}
+
+@media (min-width: 600px) {
+    .club:nth-child(even) p {
+        padding-right: 20px;
+    }
+    
+    .club:nth-child(odd) p {
+        padding-left: 20px;
+    }
+    
+    .club:nth-child(even) {
+        flex-direction: row-reverse;
+    }
+}
+
+@media (max-width: 599px) {
+    header {
+        max-height: 100vw;
+    }
+    header .container {
+        max-height: 100vw !important;
+    }
+    section {
+        flex-direction: column;
+    }
+    .club {
+        flex-direction: column;
+    }
+}
